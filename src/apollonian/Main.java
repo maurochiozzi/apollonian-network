@@ -18,18 +18,42 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int l = 10;
-        No A = new No(new Coordenada(0, 0));
-        No B = new No(new Coordenada(l / 2, (l * Math.sqrt(3)) / 2));
-        No C = new No(new Coordenada(l, 0));
+        int l = 8;
         
-        List<No> nosIniciais = new ArrayList<>();
+        List<Vertice> verticesIniciais = new ArrayList<>();
         
-        nosIniciais.add(A);
-        nosIniciais.add(B);
-        nosIniciais.add(C);
+        Vertice A = new Vertice(new Coordenada(0, 0));
+        Vertice B = new Vertice(new Coordenada(l / 2, (l * Math.sqrt(3)) / 2));
+        Vertice C = new Vertice(new Coordenada(l, 0));
         
-        Triangulo trianguloInicial = new Triangulo(nosIniciais, 0, 7);
+        
+        
+        /* quadrado
+        Vertice A = new Vertice(new Coordenada(0, 0));
+        Vertice B = new Vertice(new Coordenada(l, 0));
+        Vertice C = new Vertice(new Coordenada(l, l));
+        Vertice D = new Vertice(new Coordenada(0, l));
+        verticesIniciais.add(D);
+        */
+        /* hexagono
+        Vertice A = new Vertice(new Coordenada(0, 3));
+        Vertice B = new Vertice(new Coordenada(2.6, 1.5));
+        Vertice C = new Vertice(new Coordenada(2.6, -1.5));
+        Vertice D = new Vertice(new Coordenada(0, -3));
+        Vertice E = new Vertice(new Coordenada(-2.6, -1.5));
+        Vertice F = new Vertice(new Coordenada(-2.6, 1.5));
+        */
+        
+        verticesIniciais.add(A);
+        verticesIniciais.add(B);
+        verticesIniciais.add(C);
+        /*
+        verticesIniciais.add(D);
+        verticesIniciais.add(E);
+        verticesIniciais.add(F);
+        */
+        
+        FiguraGeometrica trianguloInicial = new FiguraGeometrica(verticesIniciais, 0, 5);
         
         System.out.println(
             "\\documentclass[10pt]{article}\n" +
@@ -38,8 +62,8 @@ public class Main {
             "\\usetikzlibrary{arrows}\n" +
             "\\pagestyle{empty}\n" +
             "\\begin{document}\n" +
-            "\\definecolor{ududff}{rgb}{0.0,0.0,1.}\n" +
             "\\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]\n" +
+            //"\\clip(-3,-3) rectangle (3,3);\n" +
             "\\clip(-0.42124056193414383,-5.722801838146528) rectangle (12.097420810726101,9.730856698438854);\n" +
             "\\begin{scriptsize}" +
             trianguloInicial.toString() +

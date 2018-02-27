@@ -1,0 +1,12 @@
+
+build/classes/\.netbeans_automatic_build
+
+build/classes/\.netbeans_update_resources
+
+build/classes/apollonian/Coordenada\.class
+
+*.class
+
+nbproject/private/private\.xml
+
+build\.xml

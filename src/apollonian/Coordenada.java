@@ -10,9 +10,11 @@ package apollonian;
  * @author Mauro
  */
 public class Coordenada {
-    double x, y;
+    public double x, y;
 
     public Coordenada() {
+        x = 0d;
+        y = 0d;
     }
 
     public Coordenada(double x, double y) {
