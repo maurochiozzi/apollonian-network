@@ -58,7 +58,7 @@ public class FiguraGeometrica {
     @Override
     public String toString(){
         if(figurasInternas.size() > 0 && vertices != null){
-            String str = "\\draw [line width=.2pt] ";
+            String str = "\\draw [line width=.2pt, color=custom] ";
             
             for(Vertice vertice : vertices){
                 str += vertice + " -- ";

@@ -53,7 +53,7 @@ public class Main {
         verticesIniciais.add(F);
         */
         
-        FiguraGeometrica trianguloInicial = new FiguraGeometrica(verticesIniciais, 0, 5);
+        FiguraGeometrica trianguloInicial = new FiguraGeometrica(verticesIniciais, 0, 6);
         
         System.out.println(
             "\\documentclass[10pt]{article}\n" +
@@ -62,6 +62,7 @@ public class Main {
             "\\usetikzlibrary{arrows}\n" +
             "\\pagestyle{empty}\n" +
             "\\begin{document}\n" +
+            "\\definecolor{custom}{rgb}{0.0,0.5,0.2}" + 
             "\\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]\n" +
             //"\\clip(-3,-3) rectangle (3,3);\n" +
             "\\clip(-0.42124056193414383,-5.722801838146528) rectangle (12.097420810726101,9.730856698438854);\n" +
